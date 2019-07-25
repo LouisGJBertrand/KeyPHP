@@ -9,7 +9,7 @@ KEYPHP DOCUMENTATION
 
 to setup a KeyPHP environnement, you need
 
-    - the lastest version of php
+    - the latest version of php
     - an empty directory
     - access to git
 
@@ -33,7 +33,7 @@ you should see
 
 to import libraries, download the archive file
 related to it and extract it. Take the folder
-nammed with the name of your library and copy it
+named with the name of your library and copy it
 into the "libraries" folder.
 
 example :
@@ -51,7 +51,7 @@ example :
 NOTE: if the library has a git, you can extract the
 lib directly in the folder with a "git clone".
 
-WARNING: libraries in KeyPHP are made a cerntain way.
+WARNING: libraries in KeyPHP are made a certain way.
 They must include:
 
     - a file that require every classes
@@ -103,7 +103,7 @@ but they return true by default and do nothing.
 
     - onStart() : this function is called on algorithm starting. It's
     only triggered once and can stop the program by returning false
-    - loop() : this function is called in a loop that break whene the
+    - loop() : this function is called in a loop that break when the
     function returns false.
     - onStop() : this function is called on algorithm ending. It's 
     only triggered once and can stop the program by returning false
