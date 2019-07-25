@@ -35,7 +35,7 @@ In order to start your algorithm, you only have to type<br>
 	- library imports<br>
 	- application informations<br>
 <br>
-# TODO:
+# Todo:<br>
 <br>
 	- terminal tool to:<br>
 		- import libraries coming from the internet<br>
