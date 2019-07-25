@@ -44,3 +44,6 @@ In order to start your algorithm, you only have to type<br>
 	- a debug feature<br>
 	- a complete documentation for basic functions<br>
 	- register the framework to multiple databases<br>
+
+© Louis Bertrand 2019 - Open sorce Project named KEYPHP
+GNU AGPLv3 LISENCE

@@ -44,4 +44,7 @@ TODO:
 		- to compile the algorithm into an executable
 	- a debug feature
 	- a complete documentation for basic functions
-	- register the framework to multiple databases
+	- register the framework to multiple 
+
+© Louis Bertrand 2019 - Open source Project named KEYPHP
+GNU AGPLv3 Lisence
