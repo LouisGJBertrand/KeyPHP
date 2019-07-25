@@ -1,5 +1,6 @@
 <?php
 
+    // custom class can be of any type
     class bis
     {
         public function __construct() {
