@@ -1,0 +1,174 @@
+KEYPHP DOCUMENTATION
+
+1. SETUP
+2. LIBRARIES
+3. APPLICATION DECLARATION
+4. EXAMPLES
+
+------------ 1. SETUP ------------
+
+to setup a KeyPHP environnement, you need
+
+    - the lastest version of php
+    - an empty directory
+    - access to git
+
+first you need to clone the git into your folder
+
+    $ cd <your folder>
+    $ git clone git:github.com/PYLOTT/KeyPHP.git
+
+and here you go
+
+to test your installation, type
+
+    $ php ENV.php
+
+you should see
+
+    Hello World!
+
+
+---------- 2. LIBRARIES ----------
+
+to import libraries, download the archive file
+related to it and extract it. Take the folder
+nammed with the name of your library and copy it
+into the "libraries" folder.
+
+example :
+
+    we want to install a library called foo
+
+    there is foo.zip
+    we unzip the file
+
+    now we get a directory called foo
+    we copy this directory into the "libraries" fd
+
+    now we have our library imported into the folder
+
+NOTE: if the library has a git, you can extract the
+lib directly in the folder with a "git clone".
+
+WARNING: libraries in KeyPHP are made a cerntain way.
+They must include:
+
+    - a file that require every classes
+    example: foo.php
+    - a file containing every infos on the library called
+    infos.ini ; this file will be loaded with all classes
+    and will be stored in a "library object" depending on
+    the way you import the library.
+
+you can import libraries with several methods.
+
+you can use
+
+    import(<your library name>);
+
+or
+
+    $<your library name> = PHPLibraryImport(<your library name>);
+    
+--- 3. APPLICATION DECLARATION ---
+
+to declare your application go to the application.php file
+and change infos in this class
+
+    class myApp extends PHPWebAppInfosHolder
+
+by replacing the following variables with yours
+
+    {
+        
+        var $packageID      = "yt.pylott.keyphp.example";
+        var $infos          = "an example application made using keyphp";
+        var $author         = "Louis Bertrand <adressepro111@pylott.yt>";
+        var $version        = "1.0.0.BETA";
+        var $mainClass      = "main";
+
+    }
+
+the main class is by default main but you can use an other name
+but if so, you need to change your main class file in consequence
+
+the name of the main class file is related to its class.
+you need to change both in order to make the application work.
+
+your main class is a class extends of KEYPHPAPPLICATION class
+which contains 3 functions that are triggered. every functions are
+optional since they are declared in the KEYPHPAPPLICATION class,
+but they return true by default and do nothing.
+
+    - onStart() : this function is called on algorithm starting. It's
+    only triggered once and can stop the program by returning false
+    - loop() : this function is called in a loop that break whene the
+    function returns false.
+    - onStop() : this function is called on algorithm ending. It's 
+    only triggered once and can stop the program by returning false
+
+------------ EXAMPLES ------------
+
+here are basic examples that uses basic functions
+
+Hello World :
+
+    import("base");
+
+    class main extends KEYPHPAPPLICATION
+    {
+        
+        public function loop()
+        {
+            print "Hello World!";
+            return false;
+        }
+
+    }
+    
+Hello World with std-I/O :
+
+    import("base");
+    import("stdio");
+
+    class main extends KEYPHPAPPLICATION
+    {
+        
+        public function loop()
+        {
+            stdio::cout("Hello World!");
+            return false;
+        }
+
+    }
+    
+Hello World + user input with std-I/O :
+
+    import("base");
+    import("stdio");
+
+    class main extends KEYPHPAPPLICATION
+    {
+        
+        public function onStart()
+        {
+            stdio::cout("Hello World!");
+            return true;
+        }
+        
+        public function loop()
+        {
+            stdio::cout("What's your age?");
+            $this->age = stdio::cin();
+            return false;
+        }
+
+        public function onStop()
+        {
+            stdio::cout("Nice ! your age is ".$this->age);
+            return true;
+        }
+
+    }
+    

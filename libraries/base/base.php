@@ -6,8 +6,8 @@
     // DELETING IT WILL CAUSE THE ENVIRONEMENT TO FAIL
     // IF YOU DELETED IT WE RECOMMANDE YOU TO DOWNLOAD IT AGAIN
 
-    if (!class_exists("PHPLibrary")) {
-        require_once("links/PHPLibrary.php");
+    if (!class_exists("PHPLibraryImport")) {
+        require_once("links/PHPLibraryImport.php");
     }
     if (!class_exists("PHPWebAppInfosHolder")) {
         require_once("links/PHPWebAppInfosHolder.php");

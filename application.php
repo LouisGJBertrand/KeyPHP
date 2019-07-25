@@ -17,7 +17,15 @@
 
     $myApp = new $myAppInfos->mainClass;
 
-    $myApp->onStart();
+    $onStartResponse = $myApp->onStart();
+    if(!$onStartResponse){
+        print("Program ended with return value ".$onStartResponse."\r\n");
+        exit;
+    }
     while ($myApp->loop()) {
     }
-    $myApp->onStop();
+    $onStopResponse = $myApp->onStart();
+    if(!$onStopResponse){
+        print("Program ended with return value ".$onStopResponse."\r\n");
+        exit;
+    }
