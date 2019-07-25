@@ -1,5 +1,7 @@
 # KeyPHP
 
+![alt text](https://github.com/PYLOTT/KeyPHP/blob/master/ressources/keyphp%20logo%20transp%20256x1.png?raw=true "Logo Title Text 1")
+
 KeyPHP is a framework used to create terminal tools<br>
 algorithm using php vanilla classes.<br>
 <br>
