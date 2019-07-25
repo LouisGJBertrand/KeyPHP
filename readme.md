@@ -21,7 +21,7 @@ Keyphp:<br>
 	This library helps the programmer to make an<br>
 	interface between the user and the programme.<br>
 <br>
-KeyPHP is an open source project under GNU AGPLv3 License<br>
+KeyPHP is an open source project under MIT License<br>
 And libraries can be share freely on the internet.<br>
 <br>
 In order to start your algorithm, you only have to type<br>
@@ -46,4 +46,4 @@ In order to start your algorithm, you only have to type<br>
 	- register the framework to multiple databases<br>
 
 © Louis Bertrand 2019 - Open sorce Project named KEYPHP
-GNU AGPLv3 LISENCE
+MIT LISENCE

@@ -21,7 +21,7 @@ Keyphp:
 	This library helps the programmer to make an
 	interface between the user and the programme.
 
-KeyPHP is an open source project under GNU AGPLv3
+KeyPHP is an open source project under MIT
 License And libraries can be share freely on the
 internet.
 
@@ -47,4 +47,4 @@ TODO:
 	- register the framework to multiple 
 
 © Louis Bertrand 2019 - Open source Project named KEYPHP
-GNU AGPLv3 Lisence
+MIT Lisence
