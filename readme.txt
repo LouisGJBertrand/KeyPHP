@@ -45,6 +45,7 @@ TODO:
 	- a debug feature
 	- a complete documentation for basic functions
 	- register the framework to multiple 
+	- an UI assistant tool to create libraries
 
 © Louis Bertrand 2019 - Open source Project named KEYPHP
 MIT Lisence
