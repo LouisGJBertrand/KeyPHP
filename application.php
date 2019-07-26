@@ -17,7 +17,7 @@
     class myApp extends PHPWebAppInfosHolder
     {
         
-        // modify thoose variables to your wish
+        // modify those variables to your wish
         var $packageID      = "yt.pylott.keyphp.example";
         var $infos          = "an example application made using keyphp";
         var $author         = "Louis Bertrand <adressepro111@pylott.yt>";
@@ -56,9 +56,10 @@
 
     }
     
-    // here the appliaction is declared
+    // here the application is declared
     // you can declare your app with construct method or directly into the class
     // previously declared
+    // in future releases, a more elegant way would be appricieated
     $myAppInfos = new myApp();
 
     // we require the main class
@@ -71,7 +72,7 @@
     // ACTUAL EXECUTION
 
 
-    // onStart() event triggered at begining of the algorithm
+    // onStart() event triggered at beginning of the algorithm
     $onStartResponse = $mainClass->onStart();
     // if the onStart() event returns false,
     // the program is aborted
