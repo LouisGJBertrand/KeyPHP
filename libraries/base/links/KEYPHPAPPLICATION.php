@@ -43,7 +43,7 @@
         public function onStop()
         {
 
-            return false;
+            return true;
 
         }
 

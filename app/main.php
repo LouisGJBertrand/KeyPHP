@@ -14,6 +14,19 @@
         
         public function loop()
         {
+
+            // // OverKill method for std io that reads and prints user prompted value
+            // $stdio = new stdio;
+            // $stdin = $stdio->openstdin();
+            // $val = $stdio->ccin();
+            // $stdout = $stdio->openstdout();
+            // $stdio->ccout($val);
+            // $stdio->closestdin($stdin);
+            // $stdio->closestdout($stdout);
+
+            // // basic method for std io that reads and prints user prompted value
+            // stdio::cout(stdio::cin());
+
             stdio::cout("Hello World!");
             new bis;
             return false;

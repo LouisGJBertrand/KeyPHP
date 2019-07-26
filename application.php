@@ -16,24 +16,30 @@
      */
     class myApp extends PHPWebAppInfosHolder
     {
-        
+
+        // to declare your app directly with the given variables of the class
         // modify those variables to your wish
-        var $packageID      = "yt.pylott.keyphp.example";
-        var $infos          = "an example application made using keyphp";
-        var $author         = "Louis Bertrand <adressepro111@pylott.yt>";
-        var $version        = "1.0.0.BETA";
-        var $mainClass      = "main";
+        // var $packageID      = "yt.pylott.keyphp.example";
+        // var $infos          = "an example application made using keyphp";
+        // var $author         = "Louis Bertrand <adressepro111@pylott.yt>";
+        // var $version        = "1.0.0.BETA";
+        // var $mainClass      = "main";
 
         /** 
          * if you want to use the constructor,
-         * replace the previous variables with thoose ones
+         * replace the previous variables with those ones
          */ 
 
-        // var $packageID;
-        // var $infos;
-        // var $author;
-        // var $version;
-        // var $mainClass;
+        /**appPackageId ex: com.organization.package*/
+        var $packageID = null;
+        /**appInfos ex: AI algorithm*/
+        var $infos = null;
+        /**appAuthor ex: Leonard Da Vinci*/
+        var $author = null;
+        /**appVersion ex: v2763:22:CZA-Z.1.BETA or v1.0*/
+        var $version = null;
+        /**mainClass ex: main*/
+        var $mainClass = null;
 
         // or use construct to 
         public function __construct($packageID = "",$infos = "",$author = "",$version = "",$mainClass = "") {
@@ -55,12 +61,11 @@
         }
 
     }
-    
+
     // here the application is declared
     // you can declare your app with construct method or directly into the class
     // previously declared
-    // in future releases, a more elegant way would be appricieated
-    $myAppInfos = new myApp();
+    $myAppInfos = new myApp($GLOBAL_packageID,$GLOBAL_infos,$GLOBAL_author,$GLOBAL_version,$GLOBAL_mainClass);
 
     // we require the main class
     require_once("app/".$myAppInfos->mainClass.".php");
@@ -94,3 +99,4 @@
         print("Program ended with return value ".$onStopResponse."\r\n");
         exit;
     }
+

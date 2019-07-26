@@ -16,7 +16,7 @@ to setup a KeyPHP environnement, you need
 first you need to clone the git into your folder
 
     $ cd <your folder>
-    $ git clone git:github.com/PYLOTT/KeyPHP.git
+    $ git clone git://github.com/PYLOTT/KeyPHP.git
 
 and here you go
 
@@ -54,8 +54,10 @@ lib directly in the folder with a "git clone".
 WARNING: libraries in KeyPHP are made a certain way.
 They must include:
 
-    - a file that require every classes
-    example: foo.php
+    - a file that require every classes (you are free
+    to make every classes inside this file but it's
+    preferred to have one file for each class in an
+    other folder) example: foo.php
     - a file containing every infos on the library called
     infos.ini ; this file will be loaded with all classes
     and will be stored in a "library object" depending on
@@ -73,7 +75,17 @@ or
     
 --- 3. APPLICATION DECLARATION ---
 
-to declare your application go to the application.php file
+to declare your application, there are several methods
+
+preferred method:
+
+    - go into the /conf/ folder
+    - open appSettings.ini file
+    - go to [AppInfosHolder]
+    - replace every variables values with your chosen ones
+
+second method:
+go to the application.php file
 and change infos in this class
 
     class myApp extends PHPWebAppInfosHolder
