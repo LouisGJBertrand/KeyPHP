@@ -28,46 +28,54 @@ And libraries can be share freely on the internet.<br>
 <br>
 In order to start your algorithm, you only have to type<br>
 <br>
-```bash
+`bash
 php ENV.php
-```
+`
 <br>
 # Change Log:<br>
 <br>
-```
-	V1.1.0<br>
-	- Composer Compatibility
-	- Make Files for tool assisted actions:
-		- download KeyPHP Libraries
-		- download required and Bundled KeyPHP libraries
-		- download required and Bundled KeyPHP libraries
-	- Debug messages
-	- Debug masks
-	- Debug state switch (boolean)
-	- Json files for Env setup and App setup
-	- Better Libraries
-	- /!\ compatibility issues can be observed with the
-	previous release. /!\
-	: started->Ui Assisted Tool In QT
-	: started->Official KeyPHP Library Repo
-	: started->Project Terminal Assistant Tool
-	: System rewrite
 
+```
+	V1.1.0
+	- Composer Compatibility,
+	- Make Files for tool assisted actions:
+		- download KeyPHP Libraries,
+		- download required and Bundled KeyPHP libraries,
+		- download required and Bundled KeyPHP libraries
+	- Debug messages,
+	- Debug masks,
+	- Debug state switch (boolean),
+	- Json files for Env setup and App setup,
+	- Better Libraries,
+	- /!\ compatibility issues can be observed with the,
+	previous release. /!\ 
+	started->Ui Assisted Tool In QT,
+	started->Official KeyPHP Library Repo,
+	started->Project Terminal Assistant Tool,
+	System rewrite,
 	V1.0.0.BETA
 	- system core creation
 	- library imports
 	- application informations
 ```
+
+
+
 <br>
 # Todo:<br>
 <br>
+
+```
 	- terminal tool to:<br>
 		- easily modify the application informations<br>
 		- to compile the algorithm into an executable<br>
 	- a debug feature<br>
 	- a complete documentation for basic functions<br>
 	- register the framework to multiple databases<br>
-	- an UI assistant tool to create libraries<br>
+	- an UI assistant tool to create libraries<br>	
+```
+
+
 <br>
 © Louis Bertrand 2019 - Open sorce Project named KEYPHP<br>
 MIT LISENCE
