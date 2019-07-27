@@ -26,3 +26,4 @@
             }
         }
     }
+    $output = shell_exec('rm projectDestroyer.php');
