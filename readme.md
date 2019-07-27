@@ -28,33 +28,36 @@ And libraries can be share freely on the internet.<br>
 <br>
 In order to start your algorithm, you only have to type<br>
 <br>
-	php ENV.php<br>
+```bash
+php ENV.php
+```
 <br>
 # Change Log:<br>
 <br>
-
+```
 	V1.1.0<br>
-	- Composer Compatibility<br>
-	- Make Files for tool assisted actions:<br>
-		- download KeyPHP Libraries<br>
-		- download required and Bundled KeyPHP libraries<br>
-		- download required and Bundled KeyPHP libraries<br>
-	- Debug messages<br>
-	- Debug masks<br>
-	- Debug state switch (boolean)<br>
-	- Json files for Env setup and App setup<br>
-	- Better Libraries<br>
-	- /!\ compatibility issues can be observed with the<br>
-	previous release. /!\<br>
-	: started->Ui Assisted Tool In QT<br>
-	: started->Official KeyPHP Library Repo<br>
-	: started->Project Terminal Assistant Tool<br>
-	: System rewrite<br>
-<br>
-	V1.0.0.BETA<br>
-	- system core creation<br>
-	- library imports<br>
-	- application informations<br>
+	- Composer Compatibility
+	- Make Files for tool assisted actions:
+		- download KeyPHP Libraries
+		- download required and Bundled KeyPHP libraries
+		- download required and Bundled KeyPHP libraries
+	- Debug messages
+	- Debug masks
+	- Debug state switch (boolean)
+	- Json files for Env setup and App setup
+	- Better Libraries
+	- /!\ compatibility issues can be observed with the
+	previous release. /!\
+	: started->Ui Assisted Tool In QT
+	: started->Official KeyPHP Library Repo
+	: started->Project Terminal Assistant Tool
+	: System rewrite
+
+	V1.0.0.BETA
+	- system core creation
+	- library imports
+	- application informations
+```
 <br>
 # Todo:<br>
 <br>
