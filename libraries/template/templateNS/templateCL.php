@@ -6,7 +6,7 @@
      * 
      * Template Class
      * 
-     * Templace Class For KeyPHP Template Library
+     * Template Class For KeyPHP Template Library
      * 
      * @author
      * 

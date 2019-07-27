@@ -38,6 +38,7 @@
 
         ]
     },
-    "Lang":"EN-UK/US"
+    "Lang":"EN-UK/US",
+    "useComposer":true
 
 }

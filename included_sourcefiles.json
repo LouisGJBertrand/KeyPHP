@@ -1,0 +1,14 @@
+[
+    "ENV.php",
+    "autoload.php",
+    "application.php",
+    "env.json",
+    "LICENSE.keyphp",
+    "doc.txt",
+    "readme.rtf",
+    "readme.txt",
+    "readme.md",
+    "Makefile",
+    "projectDestroyer.php",
+    "appInfos.json"
+]

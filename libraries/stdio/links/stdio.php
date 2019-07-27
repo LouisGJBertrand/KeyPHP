@@ -3,7 +3,10 @@
     namespace STDio;
 
     /**
-     * std class made to communicate with the user
+     * Implementation of standard I/O library for KeyPHP
+     * 
+     * @author Louis Bertrand <adressepro111@pylott.yt>
+     * 
      */
     class stdio
     {
@@ -160,3 +163,4 @@
         }
 
     }
+

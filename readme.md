@@ -31,9 +31,9 @@ In order to start your algorithm, you only have to type<br>
 ```bash
 php ENV.php
 ```
-<br>
-# Change Log:<br>
-<br>
+
+# Change Log:
+
 ```
 	V1.1.0
 	- Composer Compatibility
@@ -59,9 +59,8 @@ php ENV.php
 	- application informations
 ```
 
-<br>
-# Todo:<br>
-<br>
+# Todo:
+
 	- terminal tool to:<br>
 		- easily modify the application informations<br>
 		- to compile the algorithm into an executable<br>

@@ -1,6 +1,6 @@
 <?php
 
-    // Before begining to code, understand that this environement is a framework
+    // Before beginning to code, understand that this environment is a framework
     // vanilla php is fully compatible with KeyPHP.
 
     // in order to import a library KeyPHP and/or external libraries,
@@ -15,8 +15,8 @@
     // in order to import a custom class
     // call require_once $file function
     require_once "bis.php";
-    // or you can modify the environement application.php file
-    // to automatlicaly load every .php files from the app folder
+    // or you can modify the environment application.php file
+    // to automatically load every .php files from the app folder
     // and use namespaces to import them.
     // you should understand that, by default, the main class must be
     // in the app folder. But you can change this directory on line 12

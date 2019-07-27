@@ -3,7 +3,7 @@
     namespace KeyPHPKernel;
 
     /**
-     * PHP Web Application Infos Holder
+     * PHP Application Infos Holder
      * 
      * CONTENT OF BASE LIBRARY
      * 
@@ -14,7 +14,7 @@
     {
 
         /**
-         * here is an example of package id: yt.pylott.keyphp.base 
+         * here is an example of package id: yt.pylott.keyphp.base or KeyPHPKernel/PHPWebAppInfosHolder
          */
         var $packageID;
 

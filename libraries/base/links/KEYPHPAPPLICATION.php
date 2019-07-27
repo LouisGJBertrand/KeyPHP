@@ -26,7 +26,6 @@
          * here goes your application loop code
          *
          * @return type
-         * @throws conditon
          **/
         public function loop()
         {

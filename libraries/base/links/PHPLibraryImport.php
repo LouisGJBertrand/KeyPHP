@@ -5,7 +5,7 @@
     /**
      * PHPLibrary object
      * 
-     * used to import labraries
+     * used to import libraries
      */
     class PHPLibraryImport
     {
