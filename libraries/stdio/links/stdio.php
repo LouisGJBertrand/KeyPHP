@@ -1,5 +1,7 @@
 <?php
 
+    namespace STDio;
+
     /**
      * std class made to communicate with the user
      */

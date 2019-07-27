@@ -13,11 +13,11 @@ to setup a KeyPHP environnement, you need
     - an empty directory
     - access to git
 
-first you need to clone the git into your folder
+Download the latest Release:
 
-    $ cd <your folder>
-    $ git clone git://github.com/PYLOTT/KeyPHP.git
+    https://github.com/PYLOTT/KeyPHP/releases
 
+unzip the file in a folder
 and here you go
 
 to test your installation, type

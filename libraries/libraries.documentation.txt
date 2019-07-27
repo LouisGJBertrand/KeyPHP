@@ -1,0 +1,97 @@
+Library Documentation
+
+1. Structure
+2. examples
+
+---------- 1. Structure ----------
+
+Every Library must follow this basic structure:
+
+    - folder with the indicative name of the library:
+        - a library loader file named either:
+            - <the name of the class>.php,
+            - loader.php,
+            - as your wish but you must set the 'loaderFileName' Value
+            in infos.ini or infos.json
+        - an infos.ini or infos.json containing every infos
+
+the rest of the library must be included in the library folder
+but the developer can organize it the way he wants (except for
+files explained earlier).
+
+Your infos.ini file must include:
+
+    [infos]
+    name=                  ;library name
+    infos=                 ;library infos
+    version=               ;library version
+    author=                ;library author
+    packageID=             ;library package ID
+    loaderFileName=        ;(Optional Value)
+
+Your infos.json file must include:
+
+    {
+        "infos":
+        {
+            "name":"",
+            "infos":"",
+            "version":"",
+            "authors":
+            [
+                ""
+            ],
+            "packageID":"",
+            "loaderFileName":""
+        }
+    }
+
+you can refer to the example section of the doc to understand
+the different aspects of the infos.ini
+
+The "library named".php file can contain what you want, but it's
+preferred to import classes with this file instead of declaring
+classes into it.
+
+------------ Examples ------------
+
+library folder example:
+
+    (for library "base")
+    base/
+    - links/,
+      - BaseLibTester.php,
+      - KEYPHPAPPLICATION.php,
+      - PHPLibraryImport.php,
+      - PHPWebAppInfosHolder.php
+    - base.php,
+    - infos.ini
+
+    (for library "STD-I/O")
+    stdio/
+    - links/,
+      - stdio.php
+    - stdio.php,
+    - infos.ini
+
+example of "library named".php file:
+
+    (for library "STD-I/O")
+    // STD-I/O Class
+
+    // Optional library used to communicate with the user
+    // KeyPHP Implementation by Louis Bertrand <adressepro111@pylott.yt>
+
+    if (!class_exists("stdio")) {
+        require_once("links/stdio.php");
+    }
+
+info.ini example :
+
+(for library "base")
+[infos]
+name=base library                                   ;library name
+infos=required library for keyphp                   ;library infos
+version=1.0.0                                       ;library version
+author=Louis Bertrand <adressepro111@pylott.yt>     ;library author
+packageID=yt.pylott.keyphp.base                     ;library package ID

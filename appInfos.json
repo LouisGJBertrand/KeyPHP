@@ -1,0 +1,43 @@
+{
+
+    "appName":"KeyPHP WITH COMPOSER COMPATIBILITY",
+    "mainClass":"main",
+    "infos":"A RELEASE VERSION OF KeyPHP WITH COMPOSER COMPATIBILITY",
+    "authors":
+    [
+        "Louis Bertrand <adressepro111@pylott.yt>"
+    ],
+    "License":"MIT",
+    "version":"1.1.0",
+    "packageName":"yt.pylott.keyPHP",
+    "CompilationTarget":
+    {
+        "MACOS":
+        [
+
+            "10.9.*",
+            "10.10.*",
+            "10.11.*",
+            "10.12.*",
+            "10.13.*",
+            "10.14.*"
+
+        ],
+        "WINDOWS":
+        [
+
+            "7.*",
+            "8.*",
+            "10.*"
+
+        ],
+        "LINUX":
+        [
+
+            "*"
+
+        ]
+    },
+    "Lang":"EN-UK/US"
+
+}

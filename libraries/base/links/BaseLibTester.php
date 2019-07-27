@@ -1,5 +1,7 @@
 <?php
 
+    namespace KeyPHPKernel;
+
     /**
      * a class that verify if this library has been fully loaded
      */

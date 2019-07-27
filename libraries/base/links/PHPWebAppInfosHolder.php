@@ -1,5 +1,7 @@
 <?php
 
+    namespace KeyPHPKernel;
+
     /**
      * PHP Web Application Infos Holder
      * 
@@ -37,6 +39,14 @@
          * the main class is the class that will be executed
          */
         var $mainClass;
+
+        public function __construct($packageID, $infos, $author, $version, $mainClass) {
+            $this->packageID = $packageID;
+            $this->infos = $infos;
+            $this->author = $author;
+            $this->version = $version;
+            $this->mainClass = $mainClass;
+        }
         
     }
     

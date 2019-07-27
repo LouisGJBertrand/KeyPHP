@@ -1,30 +1,36 @@
 <?php
 
-    // PHP ENVIRONEMENT SETUP
+    define("debug",true);
+    $debugMask[]="ERROR";
+    // $debugMask[]="INFOS";
+    $debugMask[]="WARNS";
 
-    define("PHPENV_LibrariesDIR", "libraries");
-    define("PHPENV_LibrariesDatabase", PHPENV_LibrariesDIR."/libraries.ini");
+    if (debug && in_array("INFOS",$debugMask)) {
+        print "ENV SETUP\r\n\r\n";
+    }
 
-    $libraries = parse_ini_file(PHPENV_LibrariesDatabase,true);
+    $env_ = json_decode(file_get_contents("env.json"), true);
 
-    define("yt.pylott.keyphp.base", PHPENV_LibrariesDIR."/".$libraries["libraries"]["yt.pylott.keyphp.base"]);
+    define("appInfosPath","appInfos.json");
+    define("environnementPrefix",$env_["EnvOutputPrefix"]);
 
-    require_once(constant("yt.pylott.keyphp.base"));
+    if (debug && in_array("INFOS",$debugMask)) {
 
-    // 1.0.1.BETA feature : #0001 : appSettingsFile
-    // application datas will come from a .ini file
+        print environnementPrefix."ENV Name: ".$env_["Name"]."\r\n";
+        print environnementPrefix."ENV Version: ".$env_["Version"]."\r\n";
+        print environnementPrefix."ENV Authors: "."\r\n";
+        print_r($env_["Authors"]);
+        print environnementPrefix."ENV PackageID: ".$env_["PackageID"]."\r\n";
+        print "\r\n\r\n";
 
-    $GLOBAL_appSettings     = parse_ini_file("conf/appSettings.ini", true);
+    }
 
-    // var_dump($GLOBAL_appSettings);
-    // exit;
+    $appInfos = json_decode(file_get_contents(appInfosPath));
 
-    $GLOBAL_packageID       = $GLOBAL_appSettings["AppInfosHolder"]["packageID"];
-    $GLOBAL_infos           = $GLOBAL_appSettings["AppInfosHolder"]["infos"];
-    $GLOBAL_author          = $GLOBAL_appSettings["AppInfosHolder"]["author"];
-    $GLOBAL_version         = $GLOBAL_appSettings["AppInfosHolder"]["version"];
-    $GLOBAL_mainClass       = $GLOBAL_appSettings["AppInfosHolder"]["mainClass"];
-
-    // end of 1.0.1.BETA feature : #0001 : appSettingsFile
-
-    require_once("application.php");
+    $autoLoad = require('autoload.php');
+    if ($autoLoad) {
+        $application = require('application.php');
+    } else {
+        print "\033[0;31mFATAL ERROR: AUTOLOAD FAILED [0X2000]\r\nABORTING\r\n\033[m";
+        return 1;
+    }

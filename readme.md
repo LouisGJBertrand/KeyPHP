@@ -19,7 +19,7 @@ Keyphp:<br>
 	provides classes to identify the app and more. its<br>
 	automatically imported to your project<br>
 <br>
-	- « stdio » : a class that comes with the bundle.<br>
+	- « STDio » : a class that comes with the bundle.<br>
 	This library helps the programmer to make an<br>
 	interface between the user and the programme.<br>
 <br>
@@ -32,6 +32,25 @@ In order to start your algorithm, you only have to type<br>
 <br>
 # Change Log:<br>
 <br>
+
+	V1.1.0<br>
+	- Composer Compatibility<br>
+	- Make Files for tool assisted actions:<br>
+		- download KeyPHP Libraries<br>
+		- download required and Bundled KeyPHP libraries<br>
+		- download required and Bundled KeyPHP libraries<br>
+	- Debug messages<br>
+	- Debug masks<br>
+	- Debug state switch (boolean)<br>
+	- Json files for Env setup and App setup<br>
+	- Better Libraries<br>
+	- /!\ compatibility issues can be observed with the<br>
+	previous release. /!\<br>
+	: started->Ui Assisted Tool In QT<br>
+	: started->Official KeyPHP Library Repo<br>
+	: started->Project Terminal Assistant Tool<br>
+	: System rewrite<br>
+<br>
 	V1.0.0.BETA<br>
 	- system core creation<br>
 	- library imports<br>
@@ -40,7 +59,6 @@ In order to start your algorithm, you only have to type<br>
 # Todo:<br>
 <br>
 	- terminal tool to:<br>
-		- import libraries coming from the internet<br>
 		- easily modify the application informations<br>
 		- to compile the algorithm into an executable<br>
 	- a debug feature<br>
