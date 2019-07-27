@@ -29,11 +29,11 @@ Download_Library: ## download a library with a URL - call this with the correct 
 	@echo "Download Successful$(NO_COLOR)"
 
 Download_Basic_Libraries: ## download required - or not - basic libraries
-	@echo "$(OK_COLOR)"
+	@echo "$(NO_COLOR)"
 	curl -o libraries/base.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/base.zip'
 	@echo "$(WARN_COLOR)"
 	unzip libraries/base.zip -d libraries/
-	@echo "$(OK_COLOR)"
+	@echo "$(NO_COLOR)"
 	rm libraries/base.zip
 	curl -o libraries/stdio.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/stdio.zip'
 	@echo "$(WARN_COLOR)"

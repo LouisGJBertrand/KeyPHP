@@ -12,9 +12,7 @@
     require "app/".$myAPP->mainClass.".php";
     $mainClass = new $myAPP->mainClass;
 
-    
     // ACTUAL EXECUTION
-
 
     // onStart() event triggered at beginning of the algorithm
     $onStartResponse = $mainClass->onStart();
@@ -38,3 +36,4 @@
         print("Program ended with return value ".$onStopResponse."\r\n");
         exit;
     }
+    return 0;

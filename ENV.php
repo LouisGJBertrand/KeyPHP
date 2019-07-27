@@ -34,3 +34,5 @@
         print "\033[0;31mFATAL ERROR: AUTOLOAD FAILED [0X2000]\r\nABORTING\r\n\033[m";
         return 1;
     }
+
+    print "program ended with output code $application\r\n";
