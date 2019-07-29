@@ -34,8 +34,8 @@
                 if (file_exists("libraries/".$value."/infos.ini")) {
                     $clibinfos=parse_ini_file("libraries/".$value."/infos.ini",true);
                     if (isset($clibinfos["infos"]["loaderFileName"])) {
-                        if (file_exists("libraries/".$value."/".$clibinfos["loaderFileName"].".php")) {
-                            require "libraries/".$value."/".$clibinfos["loaderFileName"].".php";
+                        if (file_exists("libraries/".$value."/".$clibinfos["infos"]["loaderFileName"].".php")) {
+                            require "libraries/".$value."/".$clibinfos["infos"]["loaderFileName"].".php";
                             if (debug && in_array("INFOS",$debugMask)) {
                                 echo environnementPrefix."\033[0;32mLIBRARY \"".$value."\" LOADING: SUCCESS\r\n\033[m";
                             }
@@ -52,8 +52,8 @@
                 } elseif (file_exists("libraries/".$value."/infos.json")) {
                     $clibinfos=json_decode(file_get_contents("libraries/".$value."/infos.json",true));
                     if (isset($clibinfos["infos"]["loaderFileName"])) {
-                        if (file_exists("libraries/".$value."/".$clibinfos["loaderFileName"].".php")) {
-                            require "libraries/".$value."/".$clibinfos["loaderFileName"].".php";
+                        if (file_exists("libraries/".$value."/".$clibinfos["infos"]["loaderFileName"].".php")) {
+                            require "libraries/".$value."/".$clibinfos["infos"]["loaderFileName"].".php";
                             if (debug && in_array("INFOS", $debugMask)) {
                                 echo environnementPrefix."\033[0;32mLIBRARY \"".$value."\" LOADING: SUCCESS\r\n\033[m";
                             }
