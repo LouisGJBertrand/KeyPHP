@@ -18,9 +18,9 @@ help:
 	@echo "\n"
 
 _NOTICE: ## Downloading a library that is allready in your lib directory will cause overwritting
+_NOTICEBIS: ## WARNING, ON WINDOWS YOU NEED ZIP : http://stahlworks.com/dev/index.php?tool=zipunzip
 
 Download_Library: ## download a library with a URL - call this with the correct parametters according to your library
-# WARNING, ON WINDOWS YOU NEED ZIP : http://stahlworks.com/dev/index.php?tool=zipunzip
 ifeq ($(OS),Windows_NT)
 	@echo "$(OK_COLOR)"
 	curl -o libraries/$(LibraryName).zip '$(LibraryURL)'
