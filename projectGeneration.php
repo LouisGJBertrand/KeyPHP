@@ -187,7 +187,7 @@
             $files[2] = "application.php";
             $files[3] = "env.json";
             $files[4] = "LICENSE.keyphp";
-            $files[4] = "LICENSE.composer";
+            $files[4] = "LICENSECOMPOSER";
             $files[5] = "doc.txt";
             $files[6] = "readme.rtf";
             $files[7] = "readme.txt";
