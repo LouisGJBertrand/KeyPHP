@@ -35,6 +35,29 @@ php ENV.php
 # Change Log:
 
 ```
+	V1.2.0
+	corrected
+
+	project generator assistante:
+	to use the project generator,
+	create a new folder, copy the file projectGeneration.php
+	use
+
+	$ php projectGeneration.php
+	
+	and follow each and every steps.
+	You must be connected to internet in order to generate your project.
+
+	you can create a file called appInfos.json with everything it must 
+	contains (refer to the template file on the got)
+	
+	When you will start the project Generator, this file will be read and
+	your project will e generated according to this file.
+
+	This feature create a project that is the exact same on what's on the
+	git, so for the moment it's not the safest method, to have a fully
+	stable project, download the stable version file.
+
 	V1.1.0
 	- Composer Compatibility
 	- Make Files for tool assisted actions:
