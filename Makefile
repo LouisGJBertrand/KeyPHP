@@ -20,6 +20,16 @@ help:
 _NOTICE: ## Downloading a library that is allready in your lib directory will cause overwritting
 
 Download_Library: ## download a library with a URL - call this with the correct parametters according to your library
+# WARNING, ON WINDOWS YOU NEED ZIP : http://stahlworks.com/dev/index.php?tool=zipunzip
+ifeq ($(OS),Windows_NT)
+	@echo "$(OK_COLOR)"
+	curl -o libraries/$(LibraryName).zip '$(LibraryURL)'
+	@echo "$(WARN_COLOR)"
+	unzip libraries/$(LibraryName).zip -d libraries/
+	del libraries/$(LibraryName).zip
+	@echo "$(OK_COLOR)"
+	@echo "Download Successful$(NO_COLOR)"
+else
 	@echo "$(OK_COLOR)"
 	curl -o libraries/$(LibraryName).zip '$(LibraryURL)'
 	@echo "$(WARN_COLOR)"
@@ -27,8 +37,23 @@ Download_Library: ## download a library with a URL - call this with the correct 
 	rm libraries/$(LibraryName).zip
 	@echo "$(OK_COLOR)"
 	@echo "Download Successful$(NO_COLOR)"
+endif
 
 Download_Basic_Libraries: ## download required - or not - basic libraries
+ifeq ($(OS),Windows_NT)
+	@echo "$(NO_COLOR)"
+	curl -o libraries/base.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/base.zip'
+	@echo "$(WARN_COLOR)"
+	unzip libraries/base.zip -d libraries/
+	@echo "$(NO_COLOR)"
+	del libraries/base.zip
+	curl -o libraries/stdio.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/stdio.zip'
+	@echo "$(WARN_COLOR)"
+	unzip libraries/stdio.zip -d libraries/
+	del libraries/stdio.zip
+	@echo "$(OK_COLOR)"
+	@echo "Download Successful$(NO_COLOR)"
+else
 	@echo "$(NO_COLOR)"
 	curl -o libraries/base.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/base.zip'
 	@echo "$(WARN_COLOR)"
@@ -41,8 +66,25 @@ Download_Basic_Libraries: ## download required - or not - basic libraries
 	rm libraries/stdio.zip
 	@echo "$(OK_COLOR)"
 	@echo "Download Successful$(NO_COLOR)"
+endif
 
 Update_Basic_Libraries: ## update required - or not - basic libraries WARNING: YOUR PREVIOUS VERSION WILL BE OVERWRITTEN
+ifeq ($(OS),Windows_NT)
+	@echo "$(NO_COLOR)"
+	curl -o libraries/base.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/base.zip'
+	@echo "$(WARN_COLOR)"
+	del -r libraries/base/
+	unzip libraries/base.zip -d libraries/
+	del libraries/base.zip
+	@echo "$(NO_COLOR)"
+	curl -o libraries/stdio.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/stdio.zip'
+	@echo "$(WARN_COLOR)"
+	del -r libraries/stdio/
+	unzip libraries/stdio.zip -d libraries/
+	del libraries/stdio.zip
+	@echo "$(NO_COLOR)"
+	@echo "Updation Successful!!$(NO_COLOR)"
+else
 	@echo "$(NO_COLOR)"
 	curl -o libraries/base.zip 'https://raw.githubusercontent.com/PYLOTT/KeyPHP_Basic_Libraries/master/base.zip'
 	@echo "$(WARN_COLOR)"
@@ -57,15 +99,19 @@ Update_Basic_Libraries: ## update required - or not - basic libraries WARNING: Y
 	rm libraries/stdio.zip
 	@echo "$(NO_COLOR)"
 	@echo "Updation Successful!!$(NO_COLOR)"
+endif
 
 KeyPHP_Download_Library_FROM_REPO: ## download a library by name from the official repo (WARNING!!! the repo is not made yet)
+ifeq ($(OS),Windows_NT)
 	@echo "$(NO_COLOR)"
 	curl -o libraries/$(LibraryName).zip 'https://keyphp.pylott.yt/librepo/download?n=$(LibraryName)&v=latest'
 	@echo "$(WARN_COLOR)"
 	unzip libraries/$(LibraryName).zip -d libraries/
-	rm libraries/$(LibraryName).zip
+	del libraries/$(LibraryName).zip
 	@echo "$(NO_COLOR)"
 	@echo "Download Successful$(NO_COLOR)"
+else
+endif
 
 GET_Libraries_FROM_REPO: ## return a list of every libraries on the repo (WARNING!!! the repo is not made yet)
 	@echo "$(NO_COLOR)"

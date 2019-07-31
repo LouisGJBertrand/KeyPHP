@@ -237,16 +237,33 @@
             }
             if (file_exists("Makefile")) {
 
-                mkdir("libraries");
-                $output = shell_exec('make Download_Basic_Libraries');
-                print_r($output);
-                echo "\r\nBasic Libraries Downloaded\r\n";
-                $this->history[] = "Basic Libraries Downloaded\r\n";
+                if (PHP_OS_FAMILY == "Darwin" || PHP_OS_FAMILY == "BSD" || PHP_OS_FAMILY == "Linux" || PHP_OS_FAMILY == "Solaris") {
+                    mkdir("libraries");
+                    $output = shell_exec('make Download_Basic_Libraries');
+                    print_r($output);
+                    echo "\r\nBasic Libraries Downloaded\r\n";
+                    $this->history[] = "Basic Libraries Downloaded\r\n";
+                } elseif (PHP_OS_FAMILY == "Windows") {
+                    mkdir("libraries");
+                    // since this program is developped on OSX, tests of NMAKE
+                    // can't be made. We please you to do so and publish results
+                    // on https://github.com/PYLOTT/KeyPHP/issues.
+                    // issues can come from the makefile itself. please purpose
+                    // your corrections if you find one.
+                    // thank you for your understanding. Louis Bertrand <adressepro111@pylott.yt>
+                    $output = shell_exec('nmake Download_Basic_Libraries');
+                    print_r($output);
+                    echo "\r\nBasic Libraries Downloaded\r\n";
+                    $this->history[] = "Basic Libraries Downloaded\r\n";
+                } else {
+                    echo "\r\nYour os can't be nammed.\r\nplease proceed yourself to Makefile\r\n";
+                    $this->history[] = "Your os can't be nammed.\r\nplease proceed yourself to Makefile\r\n";
+                }
 
             } else {
 
                 echo "\r\nMakefile can't be found, ignoring\r\n";
-                $this->history[] = "Unable to find Makefile";
+                $this->history[] = "Unable to find Makefile\r\n";
 
             }
 
