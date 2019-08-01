@@ -38,7 +38,7 @@ php ENV.php
 	V1.2.0
 	corrected
 
-	project generator assistante:
+	project generator assistant:
 	to use the project generator,
 	create a new folder, copy the file projectGeneration.php
 	use
@@ -49,13 +49,13 @@ php ENV.php
 	You must be connected to internet in order to generate your project.
 
 	you can create a file called appInfos.json with everything it must 
-	contains (refer to the template file on the got)
+	contains (refer to the template file on the git)
 	
-	When you will start the project Generator, this file will be read and
-	your project will e generated according to this file.
+	When you start the project Generator, this file will be read and
+	your project will be generated according to this file.
 
-	This feature create a project that is the exact same on what's on the
-	git, so for the moment it's not the safest method, to have a fully
+	This feature create a project that is the exact same of what's on the
+	git, so, for the moment, it's not the safest method, to have a fully
 	stable project, download the stable version file.
 
 	V1.1.0
