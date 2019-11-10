@@ -211,15 +211,19 @@
                 if (!$first) {
                     $wantComposer = print("Incorrect answer, must be Y or N\r\n");
                 }
-                $wantComposer = readline("DO YOU WANT TO INSALL COMPOSER ON THE PROJECT? \r\n [WARNING] you need composer installed globally on your hardward (Y/N) : ");
+                $wantComposer = readline("DO YOU WANT TO INSALL COMPOSER ON THE PROJECT? (Y/N) : ");
                 $first = false;
             }
             if ($wantComposer == "Y") {
 
-                echo "downloading composer and Lablnet/Encryption library\r\n";
+                echo "downloading composer\r\n";
                 echo "to stop process ctrl+C\r\n";
 
-                $output = shell_exec('composer require Lablnet/Encryption');
+                $output = shell_exec("php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"
+                php -r \"if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;\"
+                php composer-setup.php
+                php -r \"unlink('composer-setup.php');\"");
+
                 print_r($output);
                 echo "\r\ncomposer installed\r\n";
                 $this->history[] = "composer installed localy\r\n";
@@ -237,13 +241,13 @@
             }
             if (file_exists("Makefile")) {
 
-                if (PHP_OS_FAMILY == "Darwin" || PHP_OS_FAMILY == "BSD" || PHP_OS_FAMILY == "Linux" || PHP_OS_FAMILY == "Solaris") {
+                if (PHP_OS == "Darwin" || PHP_OS == "BSD" || PHP_OS == "Linux" || PHP_OS == "Solaris") {
                     mkdir("libraries");
                     $output = shell_exec('make Download_Basic_Libraries');
                     print_r($output);
                     echo "\r\nBasic Libraries Downloaded\r\n";
                     $this->history[] = "Basic Libraries Downloaded\r\n";
-                } elseif (PHP_OS_FAMILY == "Windows") {
+                } elseif (PHP_OS == "Windows") {
                     mkdir("libraries");
                     // since this program is developped on OSX, tests of NMAKE
                     // can't be made. We please you to do so and publish results
