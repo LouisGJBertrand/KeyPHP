@@ -116,3 +116,6 @@ endif
 GET_Libraries_FROM_REPO: ## return a list of every libraries on the repo (WARNING!!! the repo is not made yet)
 	@echo "$(NO_COLOR)"
 	curl -o libraries/list.txt 'https://keyphp.pylott.yt/librepo/list.txt'
+
+StartApp: ## Starts the application
+	php ENV.php > logs/latest.log;
